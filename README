@@ -1,0 +1,12 @@
+tro: Temporary Restraining OrShim
+
+The tro package configures Tor as a JVM wide SOCKS proxy.
+The system must run Tor on the standard 127.0.0.1:9050 or on a provided
+address and port.
+
+Warning: This is experimental software!
+
+DNS leak warning:
+It appears that the Oracle JVM leaks DNS for hostnames passed into certain
+functions even though SOCKS5 is being used by the JVM. It is only safe to use
+tro with a program that does not use hostnames at this time.
