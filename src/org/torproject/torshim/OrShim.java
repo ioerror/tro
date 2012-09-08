@@ -13,7 +13,7 @@
 // Tor circuit building is functional.
 //
 
-package org.torproject.orshim;
+package org.torproject.torshim;
 
 public class OrShim
 {
@@ -22,22 +22,21 @@ public class OrShim
 
   public OrShim()
   {
-    OrShim(DEFAULT_TOR_HOST, DEFAULT_TOR_POR);
+	  this(DEFAULT_TOR_HOST, DEFAULT_TOR_PORT);
   }
 
-  public OrShim(String ProxyHost, int ProxyPort)
+  public OrShim(String proxyHost, int proxyPort)
   {
-    OrShim(ProxyHost, ProxyPort);
-    init();
+    init(proxyHost, proxyPort);
   }
 
-  private void init()
+  private void init(String proxyHost, int proxyPort)
   {
     if ( checkJVMSafe() )
     {
       if ( checkTorIsRunning() )
       {
-        setJVMWideProxy(ProxyHost, ProxyPort);
+        setJVMWideProxy(proxyHost, proxyPort);
       }
     }
   }
@@ -49,23 +48,23 @@ public class OrShim
     return true;
   }
 
-  public boolean checkTorIsRunning(ProxyHost, ProxyPort)
+  public boolean checkTorIsRunning()
   {
     // XXX TODO: check that Tor is running by connecting to ProxyHost,
     // ProxyPort and speaking SOCKS5 to it.
     return true;
   }
 
-  private void setJVMWideProxy(ProxyHost, ProxyPort)
+  private void setJVMWideProxy(String proxyHost, int proxyPort)
   {
-    System.setProperty(socksProxyHost=ProxyHost);
-    System.setProperty(socksProxyPort=ProxyPort);
+    System.setProperty("socksProxyHost", proxyHost);
+    System.setProperty("socksProxyPort", Integer.toString(proxyPort));
   }
 
   public boolean launchTor()
   {
    // XXX TODO: Implement some kind of JNI stuff with an embedded Tor binary
    // and launch it with an embedded torrc file.
-   return False;
+   return false;
   }
 }
