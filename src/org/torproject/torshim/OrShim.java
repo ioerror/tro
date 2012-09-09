@@ -71,16 +71,7 @@ public class OrShim
   // XXX TODO: We need to provide interfaces to every leaky DNS function and
   // basically, we should try to perform the same tasks as Torsocks if
   // possible.
-  public String gethostbyname(string)
-  {
-    // XXX TODO: We should provide a way to resolve DNS names here
-    return "127.0.0.1";
-  }
-
-  // XXX TODO: We need to provide interfaces to every leaky DNS function and
-  // basically, we should try to perform the same tasks as Torsocks if
-  // possible.
-  public String gethostbyname(string)
+  public String gethostbyname(String hostname)
   {
     // XXX TODO: We should provide a way to resolve DNS names here
     return "127.0.0.1";
