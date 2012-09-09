@@ -11,13 +11,16 @@ public class OrShimExample
     // If you want to set a custom Tor SOCKS host/port - use the following:
     // torify = new OrShim("127.0.0.1", 9050); // Set our own Tor SOCKS host/port
     // If you want to use reasonable defaults - use the following:
+    System.out.println("Loading OrShim");
     OrShim torify = new OrShim(); // Safe defaults
+    System.out.println("Ready to OrShim subsequent TCP sockets!");
 
     // Your application is now routing connections over Tor JVM wide!
     // XXX TODO: Confirm the above is true for your use case with wireshark and
     // a little help from your friends...
 
     // Do something anonymously here...
+    // XXX TODO: Make https fetch to TorCheck!
 
   }
 }
