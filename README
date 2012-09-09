@@ -10,3 +10,7 @@ DNS leak warning:
 It appears that the Oracle JVM leaks DNS for hostnames passed into certain
 functions even though SOCKS5 is being used by the JVM. It is only safe to use
 tro with a program that does not use hostnames at this time.
+
+Java note:
+This is designed to operate with OpenJDK, a.k.a. the HippieJVM, and testing on
+other JVM platforms is welcome.
