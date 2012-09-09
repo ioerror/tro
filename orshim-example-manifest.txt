@@ -1,1 +1,2 @@
-Main-Class: OrShimExample
+Main-Class: org.torproject.torshim.OrShimExample
+Class-Path: OrShim.jar

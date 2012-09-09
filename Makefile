@@ -19,7 +19,8 @@ build-library:
 run-example: build-example
 #	$(JAVA) -classpath src/ org.torproject.torshim.OrShimExample
 #	cd src && $(JAVA) -Xbootclasspath/p:../OrShim.jar src/org/torproject/torshim/OrShimExample org.torproject.torshim.OrShimExample
-	$(JAVA) -Xbootclasspath/p:OrShim.jar -jar OrShimExample.jar
+#	$(JAVA) -Xbootclasspath/p:OrShim.jar -jar OrShimExample.jar
+	$(JAVA) -jar OrShimExample.jar
 
 clean:
 	rm OrShim.jar
