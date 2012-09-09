@@ -22,7 +22,7 @@ public class OrShim
 
   public OrShim()
   {
-	  this(DEFAULT_TOR_HOST, DEFAULT_TOR_PORT);
+    this(DEFAULT_TOR_HOST, DEFAULT_TOR_PORT);
   }
 
   public OrShim(String proxyHost, int proxyPort)
@@ -44,7 +44,7 @@ public class OrShim
   public boolean checkJVMSafe()
   {
     // XXX TODO: list of tested and safe jvms goes here
-    // XXX TODO: Match our JVM against it 
+    // XXX TODO: Match our JVM against it.
     return true;
   }
 
